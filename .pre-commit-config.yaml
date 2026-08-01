@@ -1,0 +1,74 @@
+# Pre-commit hooks para el curso de IA
+# Instalación: pip install pre-commit
+# Activar: pre-commit install
+# Ejecutar manualmente: pre-commit run --all-files
+
+repos:
+  # Hooks generales
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+        name: Eliminar espacios en blanco al final
+      - id: end-of-file-fixer
+        name: Asegurar línea final en archivos
+      - id: check-yaml
+        name: Validar archivos YAML
+      - id: check-json
+        name: Validar archivos JSON
+      - id: check-added-large-files
+        name: Prevenir archivos grandes
+        args: ['--maxkb=1000']
+      - id: check-merge-conflict
+        name: Detectar marcadores de merge
+      - id: check-case-conflict
+        name: Verificar conflictos de mayúsculas/minúsculas
+      - id: debug-statements
+        name: Detectar statements de debug
+
+  # Black - Formateo de código
+  - repo: https://github.com/psf/black
+    rev: 24.1.1
+    hooks:
+      - id: black
+        name: Formatear código con Black
+        language_version: python3
+        args: ['--line-length=100']
+
+  # isort - Ordenar imports
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        name: Ordenar imports con isort
+        args: ['--profile=black', '--line-length=100']
+
+  # Ruff, Bandit, mypy y pydocstyle deshabilitados temporalmente
+  # para evitar problemas de encoding y errores en código educativo
+
+  # Notebook hooks
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.7.1
+    hooks:
+      - id: nbqa-black
+        name: Formatear notebooks con Black
+        args: ['--line-length=100']
+      - id: nbqa-isort
+        name: Ordenar imports en notebooks
+        args: ['--profile=black']
+      # nbqa-ruff deshabilitado por problemas de encoding
+
+  # Limpiar outputs de notebooks
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.7.1
+    hooks:
+      - id: nbstripout
+        name: Limpiar outputs de notebooks
+
+  # Markdown linting - Deshabilitado temporalmente
+  # - repo: https://github.com/igorshubovych/markdownlint-cli
+  #   rev: v0.39.0
+  #   hooks:
+  #     - id: markdownlint
+  #       name: Validar formato de Markdown
+  #       args: ['--fix']

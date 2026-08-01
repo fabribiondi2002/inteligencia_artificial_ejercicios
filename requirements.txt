@@ -1,0 +1,27 @@
+# Librerías fundamentales
+numpy>=1.24.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+
+# Jupyter
+jupyter>=1.0.0
+notebook>=6.5.0
+ipykernel>=6.22.0
+
+# Testing
+pytest>=7.3.0
+pytest-cov>=4.0.0
+
+# Utilidades
+tqdm>=4.65.0
+
+# Herramientas de desarrollo y calidad de código
+pre-commit>=3.6.0
+black>=24.1.0
+isort>=5.13.0
+ruff>=0.2.0
+bandit>=1.7.6
+mypy>=1.8.0
+pydocstyle>=6.3.0
+nbqa>=1.7.0
+nbstripout>=0.7.0
