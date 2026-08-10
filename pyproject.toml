@@ -1,125 +1,27 @@
-# Configuración centralizada de herramientas de Python
-
-[tool.black]
-line-length = 100
-target-version = ['py310', 'py311', 'py312']
-include = '\.pyi?$'
-extend-exclude = '''
-/(
-  # directories
-  \.eggs
-  | \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | build
-  | dist
-)/
-'''
-
-[tool.isort]
-profile = "black"
-line_length = 100
-multi_line_output = 3
-include_trailing_comma = true
-force_grid_wrap = 0
-use_parentheses = true
-ensure_newline_before_comments = true
-
-[tool.ruff]
-line-length = 100
-target-version = "py310"
-
-# Reglas a activar
-select = [
-    "E",   # pycodestyle errors
-    "W",   # pycodestyle warnings
-    "F",   # pyflakes
-    "I",   # isort
-    "C",   # flake8-comprehensions
-    "B",   # flake8-bugbear
-    "UP",  # pyupgrade
-    "N",   # pep8-naming
-    "D",   # pydocstyle
-    "S",   # bandit (security)
-    "ANN", # type annotations
+[project]
+name = "inteligencia-artificial"
+version = "0.1.0"
+description = "Material de la asignatura Inteligencia Artificial"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.22.0",
+    "pandas>=2.0.0",
+    "requests>=2.32.0",
+    "beautifulsoup4>=4.13.0",
+    "sqlalchemy>=2.0.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.13.0",
 ]
 
-# Reglas a ignorar
-ignore = [
-    "D100", # Missing docstring in public module
-    "D101", # Missing docstring in public class
-    "D102", # Missing docstring in public method
-    "D103", # Missing docstring in public function
-    "D104", # Missing docstring in public package
-    "D203", # 1 blank line required before class docstring
-    "D213", # Multi-line docstring summary should start at the second line
-    "ANN101", # Missing type annotation for self
-    "ANN102", # Missing type annotation for cls
-]
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 
-# Archivos a excluir
-exclude = [
-    ".bzr",
-    ".direnv",
-    ".eggs",
-    ".git",
-    ".hg",
-    ".mypy_cache",
-    ".nox",
-    ".pants.d",
-    ".ruff_cache",
-    ".svn",
-    ".tox",
-    ".venv",
-    "__pypackages__",
-    "_build",
-    "buck-out",
-    "build",
-    "dist",
-    "node_modules",
-    "venv",
-]
+[tool.setuptools]
+py-modules = []
 
-[tool.ruff.per-file-ignores]
-"__init__.py" = ["F401"]  # Imports sin usar en __init__.py
-"test_*.py" = ["S101", "ANN"]  # Permitir asserts y sin type hints en tests
-"*_test.py" = ["S101", "ANN"]
-
-[tool.bandit]
-exclude_dirs = [
-    "tests",
-    ".venv",
-    "venv",
-]
-skips = [
-    "B101",  # assert_used - común en notebooks educativos
-]
-format = "custom"
-
-[tool.mypy]
-python_version = "3.10"
-warn_return_any = true
-warn_unused_configs = true
-disallow_untyped_defs = false  # Flexible para código educativo
-ignore_missing_imports = true
-no_implicit_optional = true
-show_error_codes = true
-
-[tool.pydocstyle]
-convention = "numpy"
-add-ignore = ["D100", "D101", "D102", "D103", "D104"]  # Flexible para código educativo
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-python_files = ["test_*.py", "*_test.py"]
-python_classes = ["Test*"]
-python_functions = ["test_*"]
-addopts = [
-    "-v",
-    "--strict-markers",
-    "--cov=.",
-    "--cov-report=html",
-    "--cov-report=term-missing",
-]
+[tool.setuptools.packages.find]
+where = ["."]
+include = []

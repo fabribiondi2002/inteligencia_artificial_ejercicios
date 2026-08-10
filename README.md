@@ -1,40 +1,67 @@
-# Inteligencia Artificial - IUA 2025
+# Inteligencia Artificial
 
-> Repositorio del curso de Inteligencia Artificial
+> Material de la asignatura **Inteligencia Artificial**.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+## Sobre este repositorio
 
-## Descripción
+Acá se publica el material práctico de la cursada: ejercicios, ejemplos de código y recursos en Python. El contenido se organiza en carpetas numeradas (`00_...`, `01_...`, etc.), una por unidad temática, y se va publicando de forma incremental a medida que avanza la cursada.
 
-Este repositorio contiene el material práctico del curso de Inteligencia Artificial 2025. Incluye ejercicios, proyectos y recursos para aprender los conceptos fundamentales de IA a través de implementaciones en Python.
+## Contenido publicado
 
-## Documentación
+- [Clase 1 - Introducción a Python](01_introduccion_python/)
+- [Clase 2 - Carga y exploración de datos](02_carga_y_exploracion_datos/)
 
-- **[QUICK_START.md](QUICK_START.md)** - Guía rápida para desarrolladores
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Guía detallada de contribución
+## Organización del repositorio (branches y tags)
 
-## Inicio Rápido
+- Todo el material vive en la rama `master`. No hay otras ramas de desarrollo: alumnos y docentes trabajan sobre `master`.
+- Durante la cursada, el contenido se actualiza sobre `master` a medida que se dictan las clases. Para tener siempre el material al día, hace `git pull` periódicamente.
+- Al finalizar cada cohorte se crea un **tag** (por ejemplo `2025`, `2026`) que congela el estado del repositorio para esa cursada. Así, aunque el contenido de `master` siga evolucionando en años siguientes, cada cohorte conserva una referencia fija a lo que efectivamente se dictó en su año.
+- Si sos de una cohorte anterior y querés ver el material tal como se dictó en tu momento, ubicate en el tag correspondiente:
 
-### 1. Clonar el repositorio
+  ```bash
+  git fetch --tags
+  git checkout tags/2025
+  ```
 
-```bash
-git clone https://github.com/halexisgonzalez/ia-2025-iua.git
-cd ia-2025-iua
+## Quick start
+
+### Prerrequisitos
+
+- Git
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) — ver cómo instalarlo abajo
+
+### 1. Instalar uv (si no lo tenés)
+
+**Windows (PowerShell):**
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-### 2. Crear entorno virtual
+**Linux/Mac:**
 
 ```bash
-python -m venv .venv
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-### 3. Activar entorno virtual
+No hace falta tener Python instalado de antemano: uv descarga la versión que le pidas.
 
-**Windows:**
+### 2. Clonar el repositorio
+
+```bash
+git clone https://github.com/halexisgonzalez/inteligencia-artificial.git
+cd inteligencia-artificial
+```
+
+### 3. Crear el entorno virtual
+
+```bash
+uv venv --python 3.11
+```
+
+### 4. Activar el entorno
+
+**Windows (PowerShell):**
 
 ```bash
 .venv\Scripts\activate
@@ -46,107 +73,75 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-### 4. Instalar dependencias
+### 5. Instalar dependencias
 
 ```bash
-pip install -r requirements.txt
+uv pip install -e .
 ```
 
-### 5. Configurar pre-commit (recomendado para desarrolladores)
-
-**Opción A - Script automático:**
+### 6. Registrar el kernel en Jupyter
 
 ```bash
-python setup_dev.py
+python -m ipykernel install --user --name=inteligencia-artificial --display-name "Python (IA)"
 ```
 
-**Opción B - Manual:**
+### 7. Abrir Jupyter y ponerse a trabajar
 
 ```bash
-pre-commit install
+jupyter notebook
 ```
 
-**Opción C - Usando comandos del proyecto (Windows):**
+Al abrir una notebook, elegí el kernel **"Python (IA)"** desde **Kernel → Change Kernel**.
+
+### Mantenerse actualizado
+
+Cada vez que se publique material nuevo, alcanza con traer los cambios:
+
+```bash
+git pull
+```
+
+Si se agregan dependencias nuevas a `pyproject.toml`, volvé a correr `uv pip install -e .` para instalarlas.
+
+## Problemas comunes
+
+**`uv: no se reconoce como un comando` después de instalarlo**
+El instalador agrega `uv` al PATH, pero las terminales que ya estaban abiertas no se enteran. Cerrá la terminal y abrí una nueva. Si no querés reabrirla, en esa misma sesión de PowerShell corré:
 
 ```powershell
-.\dev.ps1 setup
+$env:Path = "$env:USERPROFILE\.local\bin;$env:Path"
 ```
 
-### 6. Verificar instalación
+**`.venv\Scripts\activate` falla con un error de "execution policy" en PowerShell**
+Windows por defecto no deja correr scripts `.ps1`. Habilitalo solo para esa sesión:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+o activá el entorno desde `cmd.exe` en vez de PowerShell:
 
 ```bash
-python -c "import numpy, matplotlib; print('Se instaló correctamente')"
+.venv\Scripts\activate.bat
 ```
 
-## Estructura del Proyecto
+**El kernel "Python (IA)" no aparece en Jupyter**
+Confirmá que el entorno esté activado antes de registrar el kernel (paso 6 del Quick start) y volvé a correr el comando. Si seguís sin verlo, reiniciá Jupyter (cerrá y volvé a correr `jupyter notebook`).
 
-```
-ia-2025-iua/
-│
-├── 00_introduccion/          ← Guías de configuración y ambientación
-├── 03_agentes_inteligentes/  ← Ejercicios de agentes inteligentes
-│
-├── .gitignore                ← Archivos ignorados por Git
-├── requirements.txt          ← Dependencias de Python
-├── LICENSE                   ← Licencia MIT
-└── README.md                 ← Este archivo
-```
+**`uv pip install -e .` dice que no encuentra el entorno / instala en el Python global**
+Es porque el `.venv` no está activado. Activalo (paso 4) y volvé a instalar; se nota porque el prompt de la terminal empieza con `(.venv)`.
 
-## Contenidos
+**VS Code no encuentra las librerías instaladas**
+El editor puede seguir usando otro intérprete de Python. Con la notebook o un `.py` abierto, elegí manualmente el intérprete: `Ctrl+Shift+P` → **Python: Select Interpreter** → el que apunta a `.venv`.
 
-### [00 - Introducción](00_introduccion/)
-
-Material de bienvenida, configuración del entorno y primeros pasos.
-
-### [03 - Agentes Inteligentes](03_agentes_inteligentes/)
-
-Implementación de diferentes tipos de agentes inteligentes, arquitecturas y evaluación de desempeño.
-
-## Tecnologías
-
-- **Python 3.8+**
-- **NumPy** - Computación numérica
-- **Matplotlib** - Visualización de datos
-- **Jupyter** - Notebooks interactivos
-
-## Calidad de Código
-
-Este proyecto utiliza herramientas automáticas para mantener la calidad del código:
-
-- **Black** - Formateo automático de código
-- **isort** - Organización de imports
-- **Ruff** - Linter rápido y moderno
-- **Bandit** - Análisis de seguridad
-- **mypy** - Verificación de tipos
-- **Pre-commit** - Validación automática antes de commits
-
-Ver [CONTRIBUTING.md](CONTRIBUTING.md) para más detalles sobre el uso de estas herramientas.
-
-## Profesor
+## Docente
 
 - **Ing. Alexis González**
-- **Institución:** Centro Regional Universitario Córdoba - IUA
-- **Año:** 2025
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
-## Contribuir
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Instala pre-commit: `pre-commit install`
-4. Commit tus cambios (`git commit -m 'Agregar nueva funcionalidad'`)
-5. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-6. Abre un Pull Request
-
-Para más información sobre estándares de código y herramientas, consulta [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Contacto
 
-Para consultas sobre el curso, usar los canales oficiales de la materia.
+Para consultas sobre la cursada, usar los canales oficiales de la materia.
 
 ---
 
-**¡Bienvenidos al curso de Inteligencia Artificial!**
+**¡Bienvenidos a Inteligencia Artificial!**
