@@ -9,7 +9,7 @@ Acá se publica el material práctico de la cursada: ejercicios, ejemplos de có
 ## Contenido publicado
 
 - [Clase 1 - Introducción a Python](01_introduccion_python/)
-- [Clase 2 - Carga y exploración de datos](02_carga_y_exploracion_datos/)
+- [Clase 2 - Análisis exploratorio de datos (EDA)](02_analisis_exploratorio_datos/)
 
 ## Organización del repositorio (branches y tags)
 
