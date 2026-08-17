@@ -1,14 +1,12 @@
-# Clase 2 - Análisis exploratorio de datos (EDA)
+# Clase 2 - Introducción al análisis de datos
 
 ## Notebooks
 
 - [`01_carga_y_exploracion_datos.ipynb`](01_carga_y_exploracion_datos.ipynb) — distintas formas de recolectar datos (CSV, API, base de datos, web scraping) y una primera exploración con Pandas: datos faltantes, duplicados, tipos de datos y visualizaciones básicas.
-- [`02_correlacion.ipynb`](02_correlacion.ipynb) — qué mide (y qué no) la correlación: comparación de Pearson, Spearman y Kendall sobre relaciones lineales, monótonas y no monótonas, con datos sintéticos.
-- [`03_eda_titanic.ipynb`](03_eda_titanic.ipynb) — EDA completo sobre el dataset Titanic: estadística descriptiva (tendencia central, dispersión, forma), exploración de variables categóricas, y relaciones entre variables (correlación, tablas de contingencia, pairplot, violin/box/strip/swarm plots).
 
 ## Fuentes de datos
 
-La notebook de carga combina datos remotos (para mostrar distintas formas de recolección) y varios archivos locales en [`../datasets/`](../datasets/). La notebook de correlación no usa datasets: trabaja con datos sintéticos generados en la propia notebook. La notebook de EDA usa el dataset Titanic incluido en seaborn (`sns.load_dataset('titanic')`): no requiere ningún archivo local, pero sí conexión a internet la primera vez que se corre (seaborn lo descarga y lo cachea en `~/seaborn-data`).
+La notebook combina datos remotos (para mostrar distintas formas de recolección) y varios archivos locales en [`../datasets/`](../datasets/):
 
 | Fuente | Origen | Uso en la notebook |
 |---|---|---|
