@@ -12,6 +12,10 @@ Acá se publica el material práctico de la cursada: ejercicios, ejemplos de có
 - [Clase 2 - Introducción al análisis de datos](02_introduccion_analisis_datos/)
 - [Clase 3 - Análisis exploratorio de datos (EDA)](03_analisis_exploratorio_datos_eda/)
 
+## Material complementario
+
+- [`material_complementario/`](material_complementario/) — notebooks y ejercicios de repaso de Python, NumPy, Pandas, Matplotlib y Seaborn. No es parte del temario de la materia ni sigue la numeración de clases.
+
 ## Organización del repositorio (branches y tags)
 
 - Todo el material vive en la rama `master`. No hay otras ramas de desarrollo: alumnos y docentes trabajan sobre `master`.
@@ -135,6 +139,20 @@ Es porque el `.venv` no está activado. Activalo (paso 4) y volvé a instalar; s
 **VS Code no encuentra las librerías instaladas**
 El editor puede seguir usando otro intérprete de Python. Con la notebook o un `.py` abierto, elegí manualmente el intérprete: `Ctrl+Shift+P` → **Python: Select Interpreter** → el que apunta a `.venv`.
 
+## Bibliografía recomendada
+
+**Libro principal:**
+
+- *Artificial Intelligence: A Modern Approach* — Stuart Russell, Peter Norvig (Ed. Pearson)
+
+**Otros recursos útiles:**
+
+- *Artificial Intelligence Basics: A Non-Technical Introduction* — Tom Taulli (Ed. Apress)
+- *Artificial Intelligence For Dummies* — John Paul Mueller, Luca Massaron
+- [*An Introduction to Statistical Learning*](https://www.statlearning.com/) — Gareth James et al. (Ed. Springer)
+- [*Python Data Science Handbook*](https://jakevdp.github.io/PythonDataScienceHandbook/) — Jake VanderPlas
+- *The Elements of Statistical Learning* — Trevor Hastie et al. (Ed. Springer)
+
 ## Docente
 
 - **Ing. Alexis González**
@@ -142,6 +160,10 @@ El editor puede seguir usando otro intérprete de Python. Con la notebook o un `
 ## Contacto
 
 Para consultas sobre la cursada, usar los canales oficiales de la materia.
+
+## Licencia
+
+Este material está bajo una licencia [Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es). Podés compartirlo y adaptarlo dando crédito, siempre que no sea con fines comerciales y que compartas cualquier adaptación bajo la misma licencia. Ver el archivo [LICENSE](LICENSE).
 
 ---
 
