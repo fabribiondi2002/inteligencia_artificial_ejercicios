@@ -12,6 +12,7 @@ Acá se publica el material práctico de la cursada: ejercicios, ejemplos de có
 - [Clase 2 - Introducción al análisis de datos](02_introduccion_analisis_datos/)
 - [Clase 3 - Análisis exploratorio de datos (EDA)](03_analisis_exploratorio_datos_eda/)
 - [Clase 4 - Medidas de asociación, datos faltantes y outliers](04_asociacion_faltantes_outliers/)
+- [Clase 5 - Procesamiento y limpieza de datos](05_procesamiento_y_limpieza_de_datos/)
 
 ## Material complementario
 
