@@ -13,6 +13,7 @@ Acá se publica el material práctico de la cursada: ejercicios, ejemplos de có
 - [Clase 3 - Análisis exploratorio de datos (EDA)](03_analisis_exploratorio_datos_eda/)
 - [Clase 4 - Medidas de asociación, datos faltantes y outliers](04_asociacion_faltantes_outliers/)
 - [Clase 5 - Procesamiento y limpieza de datos](05_procesamiento_y_limpieza_de_datos/)
+- [Clase 6 - Feature engineering y EDA avanzado](06_feature_engineering_avanzado/)
 
 ## Material complementario
 

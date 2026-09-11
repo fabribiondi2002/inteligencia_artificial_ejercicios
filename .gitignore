@@ -38,3 +38,6 @@ desktop.ini
 *.tmp
 *.bak
 *.cache
+
+# Reportes generados (EDA automático)
+06_feature_engineering_avanzado/reportes/
