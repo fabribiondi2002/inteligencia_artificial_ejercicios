@@ -28,6 +28,7 @@ dependencies = [
     "librosa>=0.10.0",
     "tensorflow>=2.16.0",
     "setuptools>=68.0.0,<81",
+    "pygame>=2.5.0",
 ]
 
 [build-system]
