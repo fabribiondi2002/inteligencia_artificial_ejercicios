@@ -15,6 +15,7 @@ Acá se publica el material práctico de la cursada: ejercicios, ejemplos de có
 - [Clase 5 - Procesamiento y limpieza de datos](05_procesamiento_y_limpieza_de_datos/)
 - [Clase 6 - Feature engineering y EDA avanzado](06_feature_engineering_avanzado/)
 - [Clase 7 - Agentes y resolución de problemas mediante búsqueda](07_agentes_y_busqueda/)
+- [Clase 8 - Optimización: búsqueda local y espacios continuos](08_optimizacion/)
 
 ## Material complementario
 
