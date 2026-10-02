@@ -27,7 +27,7 @@ Las notebooks importan estos módulos directamente (tienen que quedar en la mism
 
 ## Notas
 
-- Las notebooks `02` a `05` lanzan cientos de búsquedas en paralelo usando todos los núcleos de la máquina, así que pueden tardar unos minutos según el equipo.
+- Las notebooks `02` a `05` lanzan 500 búsquedas en paralelo usando todos los núcleos de la máquina, y **pueden tardar bastante**. Como referencia, en una máquina de 24 núcleos la ejecución completa tardó: `02` ≈ 20 min, `03` ≈ 1,5 min, `04` ≈ 6,5 min y `05` ≈ 15 min (con menos núcleos va a tardar más). Para probar más rápido, bajá el parámetro `max_iterations` de `parallel_sudoku_search`.
 - Las barras de progreso (`tqdm.notebook`) necesitan `ipywidgets` (ya incluido en las dependencias del repositorio).
 
 ## Fuentes de datos
