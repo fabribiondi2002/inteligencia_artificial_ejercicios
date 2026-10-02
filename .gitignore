@@ -45,3 +45,6 @@ desktop.ini
 # JSON generados por las notebooks del simulador de Hanoi (los de simulator/ son de ejemplo y sí se versionan)
 07_agentes_y_busqueda/initial_state.json
 07_agentes_y_busqueda/sequence.json
+
+# Modelo generado por la notebook de scikit-learn
+09_aprendizaje_automatico/modelo.pkl
