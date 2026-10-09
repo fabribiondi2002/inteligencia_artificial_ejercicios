@@ -51,3 +51,7 @@ desktop.ini
 
 # Modelos generados por las notebooks de regresión
 10_regresion/*.pkl
+
+# Archivos generados por la notebook de introducción a OpenCV
+extra/computer_vision/chart.png
+extra/computer_vision/modificada.png

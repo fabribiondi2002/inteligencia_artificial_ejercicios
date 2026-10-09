@@ -23,6 +23,10 @@ Acá se publica el material práctico de la cursada: ejercicios, ejemplos de có
 
 - [`material_complementario/`](material_complementario/) — notebooks y ejercicios de repaso de Python, NumPy, Pandas, Matplotlib y Seaborn. No es parte del temario de la materia ni sigue la numeración de clases.
 
+## Extra
+
+- [`extra/`](extra/) — material adicional fuera del temario de la materia: por ahora, una introducción a OpenCV (ver [`extra/computer_vision/`](extra/computer_vision/)).
+
 ## Organización del repositorio (branches y tags)
 
 - Todo el material vive en la rama `master`. No hay otras ramas de desarrollo: alumnos y docentes trabajan sobre `master`.
