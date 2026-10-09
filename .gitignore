@@ -48,3 +48,6 @@ desktop.ini
 
 # Modelo generado por la notebook de scikit-learn
 09_aprendizaje_automatico/modelo.pkl
+
+# Modelos generados por las notebooks de regresión
+10_regresion/*.pkl
