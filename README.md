@@ -16,10 +16,16 @@ Acá se publica el material práctico de la cursada: ejercicios, ejemplos de có
 - [Clase 6 - Feature engineering y EDA avanzado](06_feature_engineering_avanzado/)
 - [Clase 7 - Agentes y resolución de problemas mediante búsqueda](07_agentes_y_busqueda/)
 - [Clase 8 - Optimización: búsqueda local y espacios continuos](08_optimizacion/)
+- [Clase 9 - Aprendizaje automático](09_aprendizaje_automatico/)
+- [Clase 10 - Regresión](10_regresion/)
 
 ## Material complementario
 
 - [`material_complementario/`](material_complementario/) — notebooks y ejercicios de repaso de Python, NumPy, Pandas, Matplotlib y Seaborn. No es parte del temario de la materia ni sigue la numeración de clases.
+
+## Extra
+
+- [`extra/`](extra/) — material adicional fuera del temario de la materia: por ahora, una introducción a OpenCV (ver [`extra/computer_vision/`](extra/computer_vision/)).
 
 ## Organización del repositorio (branches y tags)
 

@@ -45,3 +45,13 @@ desktop.ini
 # JSON generados por las notebooks del simulador de Hanoi (los de simulator/ son de ejemplo y sí se versionan)
 07_agentes_y_busqueda/initial_state.json
 07_agentes_y_busqueda/sequence.json
+
+# Modelo generado por la notebook de scikit-learn
+09_aprendizaje_automatico/modelo.pkl
+
+# Modelos generados por las notebooks de regresión
+10_regresion/*.pkl
+
+# Archivos generados por la notebook de introducción a OpenCV
+extra/computer_vision/chart.png
+extra/computer_vision/modificada.png
