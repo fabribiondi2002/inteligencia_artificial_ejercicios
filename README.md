@@ -27,6 +27,10 @@ Acá se publica el material práctico de la cursada: ejercicios, ejemplos de có
 
 - [`extra/`](extra/) — material adicional fuera del temario de la materia: por ahora, una introducción a OpenCV (ver [`extra/computer_vision/`](extra/computer_vision/)).
 
+## Trabajo final
+
+- [`trabajo_final/`](trabajo_final/) — consigna y plantilla obligatoria (estructura de carpetas + `README.md` + demo en GitHub Pages) para el repositorio del trabajo final.
+
 ## Organización del repositorio (branches y tags)
 
 - Todo el material vive en la rama `master`. No hay otras ramas de desarrollo: alumnos y docentes trabajan sobre `master`.
