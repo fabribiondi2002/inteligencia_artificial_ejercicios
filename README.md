@@ -18,6 +18,7 @@ Acá se publica el material práctico de la cursada: ejercicios, ejemplos de có
 - [Clase 8 - Optimización: búsqueda local y espacios continuos](08_optimizacion/)
 - [Clase 9 - Aprendizaje automático](09_aprendizaje_automatico/)
 - [Clase 10 - Regresión](10_regresion/)
+- [Clase 11 - Clasificación](11_clasificacion/)
 
 ## Material complementario
 
